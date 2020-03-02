@@ -9,11 +9,24 @@ canvas.height = height;
 
 // begin hier met jouw code voor deze opdracht
 
-let myPoint = new Point(500,200,20,"red");
-myPoint.draw(context);
+let colors = ["red", "green", "blue", "yellow", "purple", "pink", "orange"];
 
-let myPoint2 = new Point(100,100,40,"green");
-myPoint2.draw(context);
+function getRandomNumber(max){
+    return Math.floor(Math.random()*max);
+  }
 
-let myPoint3 = new Point(200,400,80,"blue");
-myPoint3.draw(context);
+function spawn(){
+    let myCircle = new Point(getRandomNumber(width), getRandomNumber(height),getRandomNumber(100),colors[getRandomNumber(colors.length)])
+    myCircle.draw();
+}
+
+function animate(){
+    spawn();
+  }
+  
+  setInterval(animate,0);
+
+
+
+
+
