@@ -25,8 +25,3 @@ function animate(){
   }
   
   setInterval(animate,0);
-
-
-
-
-
