@@ -10,13 +10,14 @@ canvas.height = height;
 // begin hier met jouw code voor deze opdracht
 
 // create namespaces
-let A,B,C,ab,bc,ca,altitudebc,altitudeab,altitudeca;
+let A,B,C,ab,bc,ca,altitudebc,altitudeab,altitudeca,S;
 
 
 // create points
 A = new Point(100,100,20,"red",true,"A");
 B = new Point(600,150,20,"green",true,"B");
 C = new Point(300,300,20,"blue",true,"C");
+S = new Point(300,300,10,"purple",false,"S")
 
 ab = new LinearFunction(1,1);
 bc = new LinearFunction(1,1);
@@ -36,9 +37,7 @@ function animate(){
   context.closePath()
   context.stroke();
   context.fill();
-  A.draw();
-  B.draw();
-  C.draw();
+  
 
   ab.slope = (B.y - A.y)/(B.x - A.x);
   ab.intercept = B.y - B.x*ab.slope;
@@ -63,6 +62,13 @@ function animate(){
   altitudeca.slope = -1/ca.slope;
   altitudeca.intercept= B.y - B.x*altitudeca.slope;
   altitudeca.draw(context);
+
+  S.x = altitudebc.intersection(altitudeab).x;
+  S.y = altitudebc.intersection(altitudeab).y;
+  S.draw(context);
+  A.draw();
+  B.draw();
+  C.draw();
 
 }
 
