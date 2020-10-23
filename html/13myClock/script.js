@@ -22,7 +22,7 @@ minutesHand = new Image();
 minutesHand.src = "images/minutesHand.png";
 
 hoursHand = new Image();
-hoursHand.src = "images/hourshand.png"
+hoursHand.src = "images/hoursHand.png"
 
 time = new Date();
 

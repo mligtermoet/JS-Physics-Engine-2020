@@ -45,13 +45,13 @@ function animate(){
 	context.drawImage(car.image,car.pos,0);
 
 	context.save();
-	context.translate(car.pos + 213,200);
+	context.translate(car.pos + 213,400);
 	context.rotate(wheels.angle);
 	context.drawImage(wheels.backWheel,-wheels.backWheel.width/2,-wheels.backWheel.height/2);
 	context.restore();
 
 	context.save();
-	context.translate(car.pos + 753,200);
+	context.translate(car.pos + 753,400);
 	context.rotate(wheels.angle);
 	context.drawImage(wheels.frontWheel,-wheels.frontWheel.width/2,-wheels.frontWheel.height/2);
 	context.restore();
